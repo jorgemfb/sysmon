@@ -2,31 +2,52 @@
 
 Herramienta de monitorización modular en C para Linux.
 
-## Estado actual
+## Estado actual v1
 
-Este repositorio contiene una base coherente para empezar a trabajar con Codex sin tocar la estructura congelada del proyecto.
+Este repositorio contiene una implementación funcional con modos `local`, `server` y `client`, flujo modular de collectors/módulos y salida terminal legible.
 
-### Núcleo incluido
-- core mínimo
-- config mínima
-- utilidades base
-- scheduler básico
-- registry básico
-- snapshot básico
-- app básica
-- módulo vertical de ejemplo: identity
+### Incluye actualmente
+- runtime base (`main -> app -> registry -> scheduler -> module -> collector -> snapshot`)
+- collectors/módulos de sistema (identity, memory, cpu, disk, filesystem, network, process, service, temperature, smart, logs, package, trend, report)
+- evaluación de alertas y reporte Markdown
+- salida UI local y salida UI básica de cliente remoto
 
 ## Regla principal
 
 La estructura del repositorio está congelada y no debe reorganizarse.
 
-## Build rápido
+## Build y test
 
 ```bash
 make
-./bin/sysmon
+make test              # unit tests
+make test-integration  # integration tests
 ```
 
-## Objetivo inmediato
+## Uso rápido
 
-Consolidar el núcleo y, a partir de ahí, implementar collectors y módulos reales sin rediseñar el proyecto.
+```bash
+# Ayuda CLI
+./bin/sysmon --help
+
+# Modo local (por defecto)
+./bin/sysmon
+./bin/sysmon --mode local
+
+# Modo server
+./bin/sysmon --mode server --bind 127.0.0.1 --port 19090
+
+# Modo client
+./bin/sysmon --mode client --host 127.0.0.1 --port 19090
+```
+
+## Documentación operativa
+
+- `docs/user/local-mode.md`
+- `docs/user/server-mode.md`
+- `docs/user/client-mode.md`
+- `docs/development/build.md`
+
+## Objetivo inmediato (continuidad v1)
+
+Endurecer robustez operativa y documentación sin rediseñar la arquitectura base.

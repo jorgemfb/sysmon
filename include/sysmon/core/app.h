@@ -6,6 +6,8 @@
 #include "sysmon/core/scheduler.h"
 #include "sysmon/core/snapshot.h"
 
+#include <stdint.h>
+
 typedef struct sysmon_app {
     sysmon_context_t context;
     sysmon_registry_t registry;
@@ -16,6 +18,9 @@ typedef struct sysmon_app {
 int sysmon_app_init(sysmon_app_t *app);
 int sysmon_app_register_defaults(sysmon_app_t *app);
 int sysmon_app_run(sysmon_app_t *app);
+int sysmon_app_run_local(sysmon_app_t *app);
+int sysmon_app_run_server(sysmon_app_t *app, const char *bind_address, uint16_t port);
+int sysmon_app_run_client(sysmon_app_t *app, const char *server_address, uint16_t port);
 void sysmon_app_shutdown(sysmon_app_t *app);
 
 #endif

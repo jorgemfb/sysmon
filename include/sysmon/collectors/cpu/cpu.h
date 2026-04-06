@@ -1,6 +1,8 @@
-#ifndef INCLUDE_SYSMON_COLLECTORS_CPU_CPU_H
-#define INCLUDE_SYSMON_COLLECTORS_CPU_CPU_H
+#ifndef SYSMON_COLLECTORS_CPU_CPU_H
+#define SYSMON_COLLECTORS_CPU_CPU_H
 
-/* TODO */
+#include "sysmon/core/snapshot.h"
+
+int sysmon_collect_cpu(sysmon_snapshot_t *snapshot);
 
 #endif

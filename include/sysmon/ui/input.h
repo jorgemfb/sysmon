@@ -1,0 +1,6 @@
+#ifndef INCLUDE_SYSMON_UI_INPUT_H
+#define INCLUDE_SYSMON_UI_INPUT_H
+
+/* TODO */
+
+#endif

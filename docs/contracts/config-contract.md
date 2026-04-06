@@ -1,0 +1,3 @@
+# Config Contract
+
+Placeholder.

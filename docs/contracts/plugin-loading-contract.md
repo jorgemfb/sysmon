@@ -1,0 +1,3 @@
+# Plugin Loading Contract
+
+Placeholder.

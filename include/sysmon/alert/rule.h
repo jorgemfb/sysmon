@@ -1,0 +1,6 @@
+#ifndef INCLUDE_SYSMON_ALERT_RULE_H
+#define INCLUDE_SYSMON_ALERT_RULE_H
+
+/* TODO */
+
+#endif

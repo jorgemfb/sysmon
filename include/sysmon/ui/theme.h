@@ -1,0 +1,6 @@
+#ifndef INCLUDE_SYSMON_UI_THEME_H
+#define INCLUDE_SYSMON_UI_THEME_H
+
+/* TODO */
+
+#endif
